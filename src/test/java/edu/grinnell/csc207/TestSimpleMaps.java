@@ -1,5 +1,7 @@
 package edu.grinnell.csc207;
 
+import edu.grinnell.csc207.util.MiscUtils;
+import edu.grinnell.csc207.util.Pair;
 import edu.grinnell.csc207.util.SimpleMap;
 
 import java.util.ArrayList;
@@ -10,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -62,7 +64,7 @@ public class TestSimpleMaps {
 
   /**
    * A word list stolen from some tests that SamR wrote in the distant past.
-   */
+   */// STUB/HACK
   static final String[] words = {"aardvark", "anteater", "antelope", "bear",
       "bison", "buffalo", "chinchilla", "cat", "dingo", "elephant", "eel",
       "flying squirrel", "fox", "goat", "gnu", "goose", "hippo", "horse",
@@ -214,7 +216,7 @@ public class TestSimpleMaps {
    *
    * @param i
    *   The integer to remove.
-   */
+   */// STUB/HACK
   void remove(Integer i) {
     operations.add("remove(" + i + ");");
     stringMap.remove(i.toString());
