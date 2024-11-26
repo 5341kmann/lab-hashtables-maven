@@ -225,9 +225,21 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
     if (alist == null) {
       alist = new ArrayList<Pair<K, V>>();
       this.buckets[index] = alist;
-    } // if
-    alist.add(new Pair<K, V>(key, value));
-    ++this.size;
+      alist.add(new Pair<K, V>(key, value));
+      ++this.size;
+    } else{
+      for(int i = 0; i < alist.size(); i++){
+        Pair<K, V> pair = alist.get(i);
+        if(pair.key().equals(key)){
+          result = pair.value();
+          alist.set(i, pair);
+          return result;
+        } //if
+      } //for
+      //
+      alist.set(this.size++, new Pair<K, V>(key, value));
+    } //if
+
 
     // Report activity, if appropriate
     if (REPORT_BASIC_CALLS && (reporter != null)) {
