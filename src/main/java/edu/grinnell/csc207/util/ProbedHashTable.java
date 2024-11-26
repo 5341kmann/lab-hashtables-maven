@@ -199,7 +199,7 @@ public class ProbedHashTable<K, V> implements HashTable<K, V> {
     } // get
   } // get(K)
 
-  /**
+  /** m
    * Iterate the keys in some order.
    *
    * @return
@@ -245,7 +245,8 @@ public class ProbedHashTable<K, V> implements HashTable<K, V> {
     int index = find(key);
     if (this.pairs[index] != null) {
       result = ((Pair<K, V>) this.pairs[index]).value();
-    } // if
+    } 
+
     this.pairs[index] = new Pair<K, V>(key, value);
     // Report activity, if appropriate
     if (REPORT_BASIC_CALLS && (reporter != null)) {
@@ -382,7 +383,12 @@ public class ProbedHashTable<K, V> implements HashTable<K, V> {
    * @return the aforementioned index.
    */
   int find(K key) {
-    return Math.abs(key.hashCode()) % this.pairs.length;
+    int index = Math.abs(key.hashCode()) % this.pairs.length;
+    pairs[index]
+    while (pairs[index] == null){
+      index = (index + 1) % this.pairs.length;
+    }
+    return 
   } // find(K)
 
 } // class ProbedHashTable<K, V>

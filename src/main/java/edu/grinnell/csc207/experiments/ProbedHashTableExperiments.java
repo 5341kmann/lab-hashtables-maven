@@ -43,10 +43,10 @@ public class ProbedHashTableExperiments {
 
     // Conduct some of the experiments
     HashTableExperiments.matchingKeysExpt(pen, htab);
-    HashTableExperiments.repeatedSetExpt(pen, htab);
-    HashTableExperiments.matchingSetExpt(pen, htab);
-    HashTableExperiments.multipleSetExpt(pen, htab);
-    HashTableExperiments.removeExpt(pen, htab);
+    // HashTableExperiments.repeatedSetExpt(pen, htab);
+    // HashTableExperiments.matchingSetExpt(pen, htab);
+    // HashTableExperiments.multipleSetExpt(pen, htab);
+    // HashTableExperiments.removeExpt(pen, htab);
   } // main(String[])
 
 } // class ProbedHashTableExperiments

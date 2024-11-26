@@ -65,12 +65,16 @@ public class HashTableExperiments {
         htab.reportBasicCalls(true);
         htab.set("alpha", "alpha");
         htab.dump(pen);
+        pen.println();
         htab.set("beta", "beta");
         htab.dump(pen);
+        pen.println();
         htab.set("bravo", "bravo");
         htab.dump(pen);
+        pen.println();
         htab.set("beta", "max");
         htab.dump(pen);
+        pen.println();
         htab.reportBasicCalls(false);
         checkGet(pen, htab, "bravo");
         pen.println();
